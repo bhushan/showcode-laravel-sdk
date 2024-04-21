@@ -1,0 +1,50 @@
+{
+  "name": "enlight/showcode-laravel-sdk",
+  "description": "SDK for interacting with showcode.app",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Bhushan",
+      "email": "bhushangaykawad@gmail.com"
+    }
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "^7.8"
+  },
+  "require-dev": {
+    "laravel/pint": "^1.15",
+    "orchestra/testbench": "^9.0",
+    "pestphp/pest": "^2.34"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Enlight\\Showcode\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Enlight\\Showcode\\Providers\\ShowcodeServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "scripts": {
+    "tests": "vendor/bin/phpunit",
+    "pint": "./vendor/bin/pint"
+  }
+}
